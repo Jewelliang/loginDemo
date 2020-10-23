@@ -20,11 +20,11 @@ public class RequestInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
         String url = request.getRequestURI();
-        System.out.println("request Uri = " +url);
+        log.info("request Uri = " +url);
         StringBuffer URL = request.getRequestURL();
-        System.out.println("request URL = " +URL);
+        log.info("request URL = " +URL);
         String ip = SysConfigUtil.getIpAddress(request);
-        System.out.println("request Ip = "+ ip);
+        log.info("request Ip = "+ ip);
 
         //获取请求参数
         String queryString = request.getQueryString();

@@ -26,9 +26,8 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 logging:
-  config: logback.xml
+  config: classpath:logback-spring.xml
   level:
-    com:
-      nextleaf:
-        course01:
-          dao: trace
+    dao: debug
+    org:
+      mybatis: debug
